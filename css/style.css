@@ -22,6 +22,7 @@ nav {
     display: flex;
     flex-direction: row;
     padding-top: 40px;
+    align-items: center;
 }
 
 .logo {
@@ -35,10 +36,19 @@ nav {
 .right-menu {
     width: 60%;
     display: flex;
+    justify-content: space-evenly;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .menu li {
     display: inline-block;
+    padding: 0 20px;
+    position: relative;
 }
 
 .menu li a {
@@ -59,4 +69,31 @@ nav {
 .button a {
     text-decoration: none;
     color: white;
+}
+
+.menu a:hover {
+    color: black;
+}
+
+/* SUB-MENU */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    width: 300px;
+    box-shadow: 0 0 5px #333; /* per la sfocatura */
+}
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown .menu {
+    display: block;
+}
+
+.dropdown .menu li {
+    display: block;
+    padding: 10px;
 }
